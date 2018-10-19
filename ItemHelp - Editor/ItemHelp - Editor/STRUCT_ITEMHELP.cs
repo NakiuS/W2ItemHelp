@@ -27,6 +27,25 @@ namespace W2ItemHelp
         /// </summary>
         public ST_HELPINFO[] Line;
 
+
+
+        public bool AddLine(int _lineId, string _message, string _color)
+        {
+            if (0 > _lineId && _lineId >= Line.Length) return false;
+
+            Line[_lineId].Message = _message;
+
+            int.TryParse(_color, out Line[_lineId].Color);
+
+            return true;
+        }
+
+
+
+
+
+
+
         /// <summary>
         /// Método estático para criação de uma nova instância da estrutura.
         /// </summary>
