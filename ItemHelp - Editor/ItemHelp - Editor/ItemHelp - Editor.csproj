@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BASE.cs" />
+    <Compile Include="MyExtension.cs" />
     <Compile Include="STRUCT_ITEMHELP.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

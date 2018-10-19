@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace W2ItemHelp
 {
@@ -14,7 +15,7 @@ namespace W2ItemHelp
             /// <summary>
             /// Cor da linha.
             /// </summary>
-            public int Color;
+            public string Color;
 
             /// <summary>
             /// Texto da linha.
@@ -34,8 +35,7 @@ namespace W2ItemHelp
             if (0 > _lineId && _lineId >= Line.Length) return false;
 
             Line[_lineId].Message = _message;
-
-            int.TryParse(_color, out Line[_lineId].Color);
+            Line[_lineId].Color = _color;
 
             return true;
         }
