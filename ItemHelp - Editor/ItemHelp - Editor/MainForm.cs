@@ -166,7 +166,7 @@ namespace W2ItemHelp
           
         public static IEnumerable<T> GetFormControl<T>(Control _control) where T : Control
         {
-            var _CurControl = _control as T;
+            var _CurControl = _control as T; 
 
             if (_CurControl != null) yield return _CurControl;
 
