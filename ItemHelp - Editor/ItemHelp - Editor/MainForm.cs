@@ -163,7 +163,7 @@ namespace W2ItemHelp
             M9.Text = Content[09].Message;
         }
 
-
+          
         public static IEnumerable<T> GetFormControl<T>(Control _control) where T : Control
         {
             var _CurControl = _control as T;
