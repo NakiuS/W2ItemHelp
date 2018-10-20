@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ItemBox = new System.Windows.Forms.ListBox();
-            this.C0 = new System.Windows.Forms.TextBox();
-            this.M0 = new System.Windows.Forms.TextBox();
-            this.M1 = new System.Windows.Forms.TextBox();
-            this.C1 = new System.Windows.Forms.TextBox();
-            this.M2 = new System.Windows.Forms.TextBox();
-            this.C2 = new System.Windows.Forms.TextBox();
-            this.M3 = new System.Windows.Forms.TextBox();
-            this.C3 = new System.Windows.Forms.TextBox();
-            this.M4 = new System.Windows.Forms.TextBox();
-            this.C4 = new System.Windows.Forms.TextBox();
-            this.M5 = new System.Windows.Forms.TextBox();
-            this.C5 = new System.Windows.Forms.TextBox();
-            this.M6 = new System.Windows.Forms.TextBox();
-            this.C6 = new System.Windows.Forms.TextBox();
-            this.M7 = new System.Windows.Forms.TextBox();
-            this.C7 = new System.Windows.Forms.TextBox();
-            this.M8 = new System.Windows.Forms.TextBox();
-            this.C8 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.M9 = new System.Windows.Forms.TextBox();
             this.C9 = new System.Windows.Forms.TextBox();
+            this.M8 = new System.Windows.Forms.TextBox();
+            this.C8 = new System.Windows.Forms.TextBox();
+            this.M7 = new System.Windows.Forms.TextBox();
+            this.C7 = new System.Windows.Forms.TextBox();
+            this.M6 = new System.Windows.Forms.TextBox();
+            this.C6 = new System.Windows.Forms.TextBox();
+            this.M5 = new System.Windows.Forms.TextBox();
+            this.C5 = new System.Windows.Forms.TextBox();
+            this.M4 = new System.Windows.Forms.TextBox();
+            this.C4 = new System.Windows.Forms.TextBox();
+            this.M3 = new System.Windows.Forms.TextBox();
+            this.C3 = new System.Windows.Forms.TextBox();
+            this.M2 = new System.Windows.Forms.TextBox();
+            this.C2 = new System.Windows.Forms.TextBox();
+            this.M1 = new System.Windows.Forms.TextBox();
+            this.C1 = new System.Windows.Forms.TextBox();
+            this.M0 = new System.Windows.Forms.TextBox();
+            this.C0 = new System.Windows.Forms.TextBox();
+            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +68,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Itens disponíveis";
+            // 
+            // ItemBox
+            // 
+            this.ItemBox.FormattingEnabled = true;
+            this.ItemBox.Location = new System.Drawing.Point(17, 28);
+            this.ItemBox.Name = "ItemBox";
+            this.ItemBox.Size = new System.Drawing.Size(120, 264);
+            this.ItemBox.TabIndex = 2;
+            this.ItemBox.SelectedIndexChanged += new System.EventHandler(this.ItemBox_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -94,126 +107,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
             // 
-            // ItemBox
+            // M9
             // 
-            this.ItemBox.FormattingEnabled = true;
-            this.ItemBox.Location = new System.Drawing.Point(17, 28);
-            this.ItemBox.Name = "ItemBox";
-            this.ItemBox.Size = new System.Drawing.Size(120, 264);
-            this.ItemBox.TabIndex = 2;
-            this.ItemBox.SelectedIndexChanged += new System.EventHandler(this.ItemBox_SelectedIndexChanged);
+            this.M9.Location = new System.Drawing.Point(116, 262);
+            this.M9.Name = "M9";
+            this.M9.Size = new System.Drawing.Size(220, 20);
+            this.M9.TabIndex = 19;
             // 
-            // C0
+            // C9
             // 
-            this.C0.Location = new System.Drawing.Point(39, 28);
-            this.C0.Name = "C0";
-            this.C0.Size = new System.Drawing.Size(71, 20);
-            this.C0.TabIndex = 0;
-            // 
-            // M0
-            // 
-            this.M0.Location = new System.Drawing.Point(116, 28);
-            this.M0.Name = "M0";
-            this.M0.Size = new System.Drawing.Size(220, 20);
-            this.M0.TabIndex = 1;
-            // 
-            // M1
-            // 
-            this.M1.Location = new System.Drawing.Point(116, 54);
-            this.M1.Name = "M1";
-            this.M1.Size = new System.Drawing.Size(220, 20);
-            this.M1.TabIndex = 3;
-            // 
-            // C1
-            // 
-            this.C1.Location = new System.Drawing.Point(39, 54);
-            this.C1.Name = "C1";
-            this.C1.Size = new System.Drawing.Size(71, 20);
-            this.C1.TabIndex = 2;
-            // 
-            // M2
-            // 
-            this.M2.Location = new System.Drawing.Point(116, 80);
-            this.M2.Name = "M2";
-            this.M2.Size = new System.Drawing.Size(220, 20);
-            this.M2.TabIndex = 5;
-            // 
-            // C2
-            // 
-            this.C2.Location = new System.Drawing.Point(39, 80);
-            this.C2.Name = "C2";
-            this.C2.Size = new System.Drawing.Size(71, 20);
-            this.C2.TabIndex = 4;
-            // 
-            // M3
-            // 
-            this.M3.Location = new System.Drawing.Point(116, 106);
-            this.M3.Name = "M3";
-            this.M3.Size = new System.Drawing.Size(220, 20);
-            this.M3.TabIndex = 7;
-            // 
-            // C3
-            // 
-            this.C3.Location = new System.Drawing.Point(39, 106);
-            this.C3.Name = "C3";
-            this.C3.Size = new System.Drawing.Size(71, 20);
-            this.C3.TabIndex = 6;
-            // 
-            // M4
-            // 
-            this.M4.Location = new System.Drawing.Point(116, 132);
-            this.M4.Name = "M4";
-            this.M4.Size = new System.Drawing.Size(220, 20);
-            this.M4.TabIndex = 9;
-            // 
-            // C4
-            // 
-            this.C4.Location = new System.Drawing.Point(39, 132);
-            this.C4.Name = "C4";
-            this.C4.Size = new System.Drawing.Size(71, 20);
-            this.C4.TabIndex = 8;
-            // 
-            // M5
-            // 
-            this.M5.Location = new System.Drawing.Point(116, 158);
-            this.M5.Name = "M5";
-            this.M5.Size = new System.Drawing.Size(220, 20);
-            this.M5.TabIndex = 11;
-            // 
-            // C5
-            // 
-            this.C5.Location = new System.Drawing.Point(39, 158);
-            this.C5.Name = "C5";
-            this.C5.Size = new System.Drawing.Size(71, 20);
-            this.C5.TabIndex = 10;
-            // 
-            // M6
-            // 
-            this.M6.Location = new System.Drawing.Point(116, 184);
-            this.M6.Name = "M6";
-            this.M6.Size = new System.Drawing.Size(220, 20);
-            this.M6.TabIndex = 13;
-            // 
-            // C6
-            // 
-            this.C6.Location = new System.Drawing.Point(39, 184);
-            this.C6.Name = "C6";
-            this.C6.Size = new System.Drawing.Size(71, 20);
-            this.C6.TabIndex = 12;
-            // 
-            // M7
-            // 
-            this.M7.Location = new System.Drawing.Point(116, 210);
-            this.M7.Name = "M7";
-            this.M7.Size = new System.Drawing.Size(220, 20);
-            this.M7.TabIndex = 15;
-            // 
-            // C7
-            // 
-            this.C7.Location = new System.Drawing.Point(39, 210);
-            this.C7.Name = "C7";
-            this.C7.Size = new System.Drawing.Size(71, 20);
-            this.C7.TabIndex = 14;
+            this.C9.Location = new System.Drawing.Point(39, 262);
+            this.C9.Name = "C9";
+            this.C9.Size = new System.Drawing.Size(71, 20);
+            this.C9.TabIndex = 18;
             // 
             // M8
             // 
@@ -229,19 +135,133 @@
             this.C8.Size = new System.Drawing.Size(71, 20);
             this.C8.TabIndex = 16;
             // 
-            // M9
+            // M7
             // 
-            this.M9.Location = new System.Drawing.Point(116, 262);
-            this.M9.Name = "M9";
-            this.M9.Size = new System.Drawing.Size(220, 20);
-            this.M9.TabIndex = 19;
+            this.M7.Location = new System.Drawing.Point(116, 210);
+            this.M7.Name = "M7";
+            this.M7.Size = new System.Drawing.Size(220, 20);
+            this.M7.TabIndex = 15;
             // 
-            // C9
+            // C7
             // 
-            this.C9.Location = new System.Drawing.Point(39, 262);
-            this.C9.Name = "C9";
-            this.C9.Size = new System.Drawing.Size(71, 20);
-            this.C9.TabIndex = 18;
+            this.C7.Location = new System.Drawing.Point(39, 210);
+            this.C7.Name = "C7";
+            this.C7.Size = new System.Drawing.Size(71, 20);
+            this.C7.TabIndex = 14;
+            // 
+            // M6
+            // 
+            this.M6.Location = new System.Drawing.Point(116, 184);
+            this.M6.Name = "M6";
+            this.M6.Size = new System.Drawing.Size(220, 20);
+            this.M6.TabIndex = 13;
+            // 
+            // C6
+            // 
+            this.C6.Location = new System.Drawing.Point(39, 184);
+            this.C6.Name = "C6";
+            this.C6.Size = new System.Drawing.Size(71, 20);
+            this.C6.TabIndex = 12;
+            // 
+            // M5
+            // 
+            this.M5.Location = new System.Drawing.Point(116, 158);
+            this.M5.Name = "M5";
+            this.M5.Size = new System.Drawing.Size(220, 20);
+            this.M5.TabIndex = 11;
+            // 
+            // C5
+            // 
+            this.C5.Location = new System.Drawing.Point(39, 158);
+            this.C5.Name = "C5";
+            this.C5.Size = new System.Drawing.Size(71, 20);
+            this.C5.TabIndex = 10;
+            // 
+            // M4
+            // 
+            this.M4.Location = new System.Drawing.Point(116, 132);
+            this.M4.Name = "M4";
+            this.M4.Size = new System.Drawing.Size(220, 20);
+            this.M4.TabIndex = 9;
+            // 
+            // C4
+            // 
+            this.C4.Location = new System.Drawing.Point(39, 132);
+            this.C4.Name = "C4";
+            this.C4.Size = new System.Drawing.Size(71, 20);
+            this.C4.TabIndex = 8;
+            // 
+            // M3
+            // 
+            this.M3.Location = new System.Drawing.Point(116, 106);
+            this.M3.Name = "M3";
+            this.M3.Size = new System.Drawing.Size(220, 20);
+            this.M3.TabIndex = 7;
+            // 
+            // C3
+            // 
+            this.C3.Location = new System.Drawing.Point(39, 106);
+            this.C3.Name = "C3";
+            this.C3.Size = new System.Drawing.Size(71, 20);
+            this.C3.TabIndex = 6;
+            // 
+            // M2
+            // 
+            this.M2.Location = new System.Drawing.Point(116, 80);
+            this.M2.Name = "M2";
+            this.M2.Size = new System.Drawing.Size(220, 20);
+            this.M2.TabIndex = 5;
+            // 
+            // C2
+            // 
+            this.C2.Location = new System.Drawing.Point(39, 80);
+            this.C2.Name = "C2";
+            this.C2.Size = new System.Drawing.Size(71, 20);
+            this.C2.TabIndex = 4;
+            // 
+            // M1
+            // 
+            this.M1.Location = new System.Drawing.Point(116, 54);
+            this.M1.Name = "M1";
+            this.M1.Size = new System.Drawing.Size(220, 20);
+            this.M1.TabIndex = 3;
+            // 
+            // C1
+            // 
+            this.C1.Location = new System.Drawing.Point(39, 54);
+            this.C1.Name = "C1";
+            this.C1.Size = new System.Drawing.Size(71, 20);
+            this.C1.TabIndex = 2;
+            // 
+            // M0
+            // 
+            this.M0.Location = new System.Drawing.Point(116, 28);
+            this.M0.Name = "M0";
+            this.M0.Size = new System.Drawing.Size(220, 20);
+            this.M0.TabIndex = 1;
+            // 
+            // C0
+            // 
+            this.C0.Location = new System.Drawing.Point(39, 28);
+            this.C0.Name = "C0";
+            this.C0.Size = new System.Drawing.Size(71, 20);
+            this.C0.TabIndex = 0;
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem1,
+            this.menuItem2});
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 0;
+            this.menuItem1.Text = "&Abrir";
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Index = 1;
+            this.menuItem2.Text = "&Salvar";
             // 
             // MainForm
             // 
@@ -250,8 +270,11 @@
             this.ClientSize = new System.Drawing.Size(557, 324);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
+            this.Menu = this.mainMenu1;
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WYD - ItemHelp 1.0";
             this.groupBox1.ResumeLayout(false);
@@ -286,6 +309,9 @@
         private System.Windows.Forms.TextBox C2;
         private System.Windows.Forms.TextBox M1;
         private System.Windows.Forms.TextBox C1;
+        private System.Windows.Forms.MainMenu mainMenu1;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem2;
     }
 }
 
