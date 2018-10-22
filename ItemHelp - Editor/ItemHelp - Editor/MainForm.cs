@@ -33,8 +33,6 @@ namespace W2ItemHelp
             {
                 g_pItemHelp[i] = STRUCT_ITEMHELP.CraftProperties();
             }
-
-  
         }
 
         private void BASE_OpenItemHelp(string _fileName)
@@ -132,23 +130,11 @@ namespace W2ItemHelp
 
             var Content = g_pItemHelp[Index].Line;
 
-            int ReadCount = 0;
-
-            //foreach (var TextCall in GetFormControl<TextBox>(this))
-            //{
-            //    if (ReadCount % 2 == 0)
-            //    {
-            //        TextCall.Text = Content[ReadCount].Message;
-            //    }
-            //    else
-            //    {
-            //        TextCall.Text = Content[ReadCount].Color;
-            //    }
-
-            //    ReadCount++;
-
-            //    if (ReadCount >= Content.Length) ReadCount = 0;
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                if (g_pItemHelp[Index].Line[i].Color == null)
+                    g_pItemHelp[Index].Line[i].Color = "FFFFFFFF";
+            }
 
             C0.Text = Content[00].Color;
             M0.Text = Content[00].Message;
@@ -230,57 +216,72 @@ namespace W2ItemHelp
 
             int Index = 0;
 
-            int.TryParse(ItemBox.Items[ItemBox.SelectedIndex].ToString(), out Index);
-
-            var Content = g_pItemHelp[Index].Line;
-
-            Content[00].Color = C0.Text;
-            Content[00].Message = M0.Text;
-
-            Content[01].Color = C1.Text;
-            Content[01].Message = M1.Text;
-
-            Content[02].Color = C2.Text;
-            Content[02].Message = M2.Text;
-
-            Content[03].Color = C3.Text;
-            Content[03].Message = M3.Text;
-
-            Content[04].Color = C4.Text;
-            Content[04].Message = M4.Text;
-
-            Content[05].Color = C5.Text;
-            Content[05].Message = M5.Text;
-
-            Content[06].Color = C6.Text;
-            Content[06].Message = M6.Text;
-
-            Content[07].Color = C7.Text;
-            Content[07].Message = M7.Text;
-
-            Content[08].Color = C7.Text;
-            Content[08].Message = M8.Text;
-
-            Content[09].Color = C9.Text;
-            Content[09].Message = M9.Text;
-
-            if (save.ShowDialog() == DialogResult.OK)
+            if (ItemBox.SelectedIndex != -1)
             {
-                using (var itemhelp = new StreamWriter(save.FileName))
-                {
-                    foreach (var item in g_pItemHelp)
-                    {
-                        if (item.Index != 0)
-                        {
-                            itemhelp.WriteLine(item.Index);
+                int.TryParse(ItemBox.Items[ItemBox.SelectedIndex].ToString(), out Index);
 
-                            for (int i = 0; i < 9; i++)
+                var Content = g_pItemHelp[Index].Line;
+
+                Content[00].Color = C0.Text;
+                Content[00].Message = M0.Text;
+
+                Content[01].Color = C1.Text;
+                Content[01].Message = M1.Text;
+
+                Content[02].Color = C2.Text;
+                Content[02].Message = M2.Text;
+
+                Content[03].Color = C3.Text;
+                Content[03].Message = M3.Text;
+
+                Content[04].Color = C4.Text;
+                Content[04].Message = M4.Text;
+
+                Content[05].Color = C5.Text;
+                Content[05].Message = M5.Text;
+
+                Content[06].Color = C6.Text;
+                Content[06].Message = M6.Text;
+
+                Content[07].Color = C7.Text;
+                Content[07].Message = M7.Text;
+
+                Content[08].Color = C8.Text;
+                Content[08].Message = M8.Text;
+
+                Content[09].Color = C9.Text;
+                Content[09].Message = M9.Text;
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    using (var itemhelp = new StreamWriter(save.FileName, false, Encoding.Default))
+                    {
+                        foreach (var item in g_pItemHelp)
+                        {
+                            if (item.Index == 0)
+                                continue;
+
+                            if (item.Index != 0)
                             {
-                                itemhelp.WriteLine(item.Line[i].Color + " " + item.Line[i].Message);
+                                itemhelp.WriteLine(item.Index);
+
+                                for (int i = 0; i < 10; i++)
+                                {
+                                    if (item.Line[i].Color == null)
+                                        item.Line[i].Color = "FFFFFFFF";
+
+                                    if (!string.IsNullOrEmpty(item.Line[i].Message))
+                                    {
+                                        item.Line[i].Message = item.Line[i].Message.Replace(' ', '_');
+                                    }
+
+                                    itemhelp.WriteLine(item.Line[i].Color + " " + item.Line[i].Message);
+                                }
                             }
                         }
+                        itemhelp.Close();
                     }
-                }             
+                }
             }
         }
     }
