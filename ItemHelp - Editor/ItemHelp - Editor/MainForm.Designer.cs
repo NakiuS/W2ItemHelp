@@ -257,17 +257,19 @@
             // 
             this.menuItem1.Index = 0;
             this.menuItem1.Text = "&Abrir";
+            this.menuItem1.Click += new System.EventHandler(this.MenuItem_OpenItemHelp);
             // 
             // menuItem2
             // 
             this.menuItem2.Index = 1;
             this.menuItem2.Text = "&Salvar";
+            this.menuItem2.Click += new System.EventHandler(this.MenuItem_SaveItemContent);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 324);
+            this.ClientSize = new System.Drawing.Size(557, 303);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
