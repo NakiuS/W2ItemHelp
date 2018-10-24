@@ -35,7 +35,15 @@ namespace W2ItemHelp
             if (0 > _lineId && _lineId >= Line.Length) return false;
 
             Line[_lineId].Message = _message;
+
+            if (string.IsNullOrEmpty(_color))
+            {
+                _color = "FFFFFFFF";
+            }
+
             Line[_lineId].Color = _color;
+
+
 
             return true;
         }

@@ -82,7 +82,7 @@ namespace W2ItemHelp
 
                             g_pItemHelp[ObjectIndex].Index = ObjectIndex;
 
-                            if (ReadConfig.Length == 2)
+                            if (ReadConfig.Length >= 2)
                             {
                                 /* altera os "underline" da linha para espaço */
 
@@ -115,6 +115,21 @@ namespace W2ItemHelp
             }
         }
 
+        public Color GetColor(string _color)
+        {
+            try
+            {
+
+                return Color.FromArgb(int.Parse($"#{ _color}".Replace("#", ""), System.Globalization.NumberStyles.AllowHexSpecifier));
+            }
+            catch
+            {
+
+            }
+
+            return ColorTranslator.FromHtml("#FFFFFFF");
+        }
+
         private void ItemBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int Index = 0;
@@ -130,41 +145,55 @@ namespace W2ItemHelp
 
             var Content = g_pItemHelp[Index].Line;
 
-            for (int i = 0; i < 10; i++)
-            {
-                if (g_pItemHelp[Index].Line[i].Color == null)
-                    g_pItemHelp[Index].Line[i].Color = "FFFFFFFF";
-            }
-
             C0.Text = Content[00].Color;
             M0.Text = Content[00].Message;
+
+            L0.ForeColor = GetColor(Content[00].Color);
 
             C1.Text = Content[01].Color;
             M1.Text = Content[01].Message;
 
+            L1.ForeColor = GetColor(Content[01].Color);
+
             C2.Text = Content[02].Color;
             M2.Text = Content[02].Message;
+
+            L2.ForeColor = GetColor(Content[02].Color);
 
             C3.Text = Content[03].Color;
             M3.Text = Content[03].Message;
 
+            L3.ForeColor = GetColor(Content[03].Color);
+
             C4.Text = Content[04].Color;
             M4.Text = Content[04].Message;
+
+            L4.ForeColor = GetColor(Content[04].Color);
 
             C5.Text = Content[05].Color;
             M5.Text = Content[05].Message;
 
+            L5.ForeColor = GetColor(Content[05].Color);
+
             C6.Text = Content[06].Color;
             M6.Text = Content[06].Message;
+
+            L6.ForeColor = GetColor(Content[06].Color);
 
             C7.Text = Content[07].Color;
             M7.Text = Content[07].Message;
 
+            L7.ForeColor = GetColor(Content[07].Color);
+
             C8.Text = Content[08].Color;
             M8.Text = Content[08].Message;
 
+            L8.ForeColor = GetColor(Content[08].Color);
+
             C9.Text = Content[09].Color;
             M9.Text = Content[09].Message;
+
+            L9.ForeColor = GetColor(Content[09].Color);
         }
 
           

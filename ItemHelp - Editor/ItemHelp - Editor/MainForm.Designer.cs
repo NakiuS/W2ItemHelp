@@ -55,6 +55,16 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.L0 = new System.Windows.Forms.Label();
+            this.L1 = new System.Windows.Forms.Label();
+            this.L2 = new System.Windows.Forms.Label();
+            this.L3 = new System.Windows.Forms.Label();
+            this.L4 = new System.Windows.Forms.Label();
+            this.L5 = new System.Windows.Forms.Label();
+            this.L6 = new System.Windows.Forms.Label();
+            this.L7 = new System.Windows.Forms.Label();
+            this.L8 = new System.Windows.Forms.Label();
+            this.L9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +90,16 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.L9);
+            this.groupBox2.Controls.Add(this.L8);
+            this.groupBox2.Controls.Add(this.L7);
+            this.groupBox2.Controls.Add(this.L6);
+            this.groupBox2.Controls.Add(this.L5);
+            this.groupBox2.Controls.Add(this.L4);
+            this.groupBox2.Controls.Add(this.L3);
+            this.groupBox2.Controls.Add(this.L2);
+            this.groupBox2.Controls.Add(this.L1);
+            this.groupBox2.Controls.Add(this.L0);
             this.groupBox2.Controls.Add(this.M9);
             this.groupBox2.Controls.Add(this.C9);
             this.groupBox2.Controls.Add(this.M8);
@@ -120,6 +140,7 @@
             this.C9.Name = "C9";
             this.C9.Size = new System.Drawing.Size(71, 20);
             this.C9.TabIndex = 18;
+            this.C9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M8
             // 
@@ -134,6 +155,7 @@
             this.C8.Name = "C8";
             this.C8.Size = new System.Drawing.Size(71, 20);
             this.C8.TabIndex = 16;
+            this.C8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M7
             // 
@@ -148,6 +170,7 @@
             this.C7.Name = "C7";
             this.C7.Size = new System.Drawing.Size(71, 20);
             this.C7.TabIndex = 14;
+            this.C7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M6
             // 
@@ -162,6 +185,7 @@
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(71, 20);
             this.C6.TabIndex = 12;
+            this.C6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M5
             // 
@@ -176,6 +200,7 @@
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(71, 20);
             this.C5.TabIndex = 10;
+            this.C5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M4
             // 
@@ -190,6 +215,7 @@
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(71, 20);
             this.C4.TabIndex = 8;
+            this.C4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M3
             // 
@@ -204,6 +230,7 @@
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(71, 20);
             this.C3.TabIndex = 6;
+            this.C3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M2
             // 
@@ -218,6 +245,7 @@
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(71, 20);
             this.C2.TabIndex = 4;
+            this.C2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M1
             // 
@@ -232,6 +260,7 @@
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(71, 20);
             this.C1.TabIndex = 2;
+            this.C1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // M0
             // 
@@ -246,6 +275,7 @@
             this.C0.Name = "C0";
             this.C0.Size = new System.Drawing.Size(71, 20);
             this.C0.TabIndex = 0;
+            this.C0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mainMenu1
             // 
@@ -265,11 +295,118 @@
             this.menuItem2.Text = "&Salvar";
             this.menuItem2.Click += new System.EventHandler(this.MenuItem_SaveItemContent);
             // 
+            // L0
+            // 
+            this.L0.AutoSize = true;
+            this.L0.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L0.Location = new System.Drawing.Point(13, 28);
+            this.L0.Name = "L0";
+            this.L0.Size = new System.Drawing.Size(19, 18);
+            this.L0.TabIndex = 20;
+            this.L0.Text = "█";
+            // 
+            // L1
+            // 
+            this.L1.AutoSize = true;
+            this.L1.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L1.Location = new System.Drawing.Point(13, 54);
+            this.L1.Name = "L1";
+            this.L1.Size = new System.Drawing.Size(19, 18);
+            this.L1.TabIndex = 21;
+            this.L1.Text = "█";
+            // 
+            // L2
+            // 
+            this.L2.AutoSize = true;
+            this.L2.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L2.Location = new System.Drawing.Point(13, 80);
+            this.L2.Name = "L2";
+            this.L2.Size = new System.Drawing.Size(19, 18);
+            this.L2.TabIndex = 22;
+            this.L2.Text = "█";
+            // 
+            // L3
+            // 
+            this.L3.AccessibleDescription = "L3";
+            this.L3.AutoSize = true;
+            this.L3.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L3.Location = new System.Drawing.Point(13, 106);
+            this.L3.Name = "L3";
+            this.L3.Size = new System.Drawing.Size(19, 18);
+            this.L3.TabIndex = 23;
+            this.L3.Text = "█";
+            // 
+            // L4
+            // 
+            this.L4.AccessibleDescription = "L4";
+            this.L4.AutoSize = true;
+            this.L4.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L4.Location = new System.Drawing.Point(13, 132);
+            this.L4.Name = "L4";
+            this.L4.Size = new System.Drawing.Size(19, 18);
+            this.L4.TabIndex = 24;
+            this.L4.Text = "█";
+            // 
+            // L5
+            // 
+            this.L5.AccessibleDescription = "L5";
+            this.L5.AutoSize = true;
+            this.L5.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L5.Location = new System.Drawing.Point(13, 158);
+            this.L5.Name = "L5";
+            this.L5.Size = new System.Drawing.Size(19, 18);
+            this.L5.TabIndex = 25;
+            this.L5.Text = "█";
+            // 
+            // L6
+            // 
+            this.L6.AccessibleDescription = "L6";
+            this.L6.AutoSize = true;
+            this.L6.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L6.Location = new System.Drawing.Point(13, 184);
+            this.L6.Name = "L6";
+            this.L6.Size = new System.Drawing.Size(19, 18);
+            this.L6.TabIndex = 26;
+            this.L6.Text = "█";
+            // 
+            // L7
+            // 
+            this.L7.AccessibleDescription = "L7";
+            this.L7.AutoSize = true;
+            this.L7.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L7.Location = new System.Drawing.Point(13, 210);
+            this.L7.Name = "L7";
+            this.L7.Size = new System.Drawing.Size(19, 18);
+            this.L7.TabIndex = 27;
+            this.L7.Text = "█";
+            // 
+            // L8
+            // 
+            this.L8.AccessibleDescription = "L8";
+            this.L8.AutoSize = true;
+            this.L8.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L8.Location = new System.Drawing.Point(13, 236);
+            this.L8.Name = "L8";
+            this.L8.Size = new System.Drawing.Size(19, 18);
+            this.L8.TabIndex = 28;
+            this.L8.Text = "█";
+            // 
+            // L9
+            // 
+            this.L9.AccessibleDescription = "L9";
+            this.L9.AutoSize = true;
+            this.L9.Font = new System.Drawing.Font("Tahoma", 10.75F);
+            this.L9.Location = new System.Drawing.Point(13, 262);
+            this.L9.Name = "L9";
+            this.L9.Size = new System.Drawing.Size(19, 18);
+            this.L9.TabIndex = 29;
+            this.L9.Text = "█";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 303);
+            this.ClientSize = new System.Drawing.Size(557, 342);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -314,6 +451,16 @@
         private System.Windows.Forms.MainMenu mainMenu1;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.Label L9;
+        private System.Windows.Forms.Label L8;
+        private System.Windows.Forms.Label L7;
+        private System.Windows.Forms.Label L6;
+        private System.Windows.Forms.Label L5;
+        private System.Windows.Forms.Label L4;
+        private System.Windows.Forms.Label L3;
+        private System.Windows.Forms.Label L2;
+        private System.Windows.Forms.Label L1;
+        private System.Windows.Forms.Label L0;
     }
 }
 
