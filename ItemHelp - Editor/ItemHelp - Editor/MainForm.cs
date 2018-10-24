@@ -49,6 +49,8 @@ namespace W2ItemHelp
 
                     string Output = null;
 
+                    bool IsCast = false;
+
                     while ((Output = Sr.ReadLine()) != null)
                     {
                         if (string.IsNullOrEmpty(Output) || Output.Substring(0, 1).Equals("#")) continue;
@@ -58,11 +60,13 @@ namespace W2ItemHelp
 
                             if (ReadConfig == null) continue;
 
+                            if (LineCount > 9) { LineCount = 0; continue; }
+
                             if (ReadConfig.Length == 1)
                             {
-                                bool _isNumber = int.TryParse(ReadConfig[0], out ObjectIndex);
+                                int LastIndex = ObjectIndex;
 
-                                if (ObjectIndex >= BASE.MAX_ITEMLIST) continue;
+                                bool _isNumber = int.TryParse(ReadConfig[0], out ObjectIndex);
 
                                 if (_isNumber)
                                 {
@@ -72,17 +76,26 @@ namespace W2ItemHelp
                                 }
                                 else
                                 {
+                                    if (ReadConfig[0].GetIntFromHex() < 0 && ObjectIndex == 0 && LastIndex != 0)
+                                    {
+                                        ObjectIndex = LastIndex;
+
+                                        goto isNotNull;
+                                    }
+
                                     ObjectIndex = 0;
                                 }
 
                                 continue;
                             }
 
-                            if (ObjectIndex <= 0) continue;
+                            isNotNull:
+
+                            if (ObjectIndex <= 0 || ObjectIndex >= BASE.MAX_ITEMLIST) continue;
 
                             g_pItemHelp[ObjectIndex].Index = ObjectIndex;
 
-                            if (ReadConfig.Length >= 2)
+                            if (ReadConfig.Length == 2 || ReadConfig.Length == 3)
                             {
                                 /* altera os "underline" da linha para espaço */
 
