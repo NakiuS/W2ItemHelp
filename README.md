@@ -12,5 +12,6 @@ Aplicativo editor para o arquivo ItemHelp.dat do jogo With Your Destiny (WYD).
 ---------------------------------------------------------------------------------------
 
 Créditos:
-
-	• Douglas Lima
+	
+	• Jonatan Acahú (NakiuS)
+	• Douglas Lima (Juumper)
